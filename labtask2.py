@@ -60,8 +60,7 @@ df_clean = df[(df["Marks"] >= lower_bound) & (df["Marks"] <= upper_bound)]
 print("Original Std Dev:", df["Marks"].std())
 print("Cleaned Std Dev:", df_clean["Marks"].std())
 
-import matplotlib.pyplot as plt
-
+import matplotlib.pyplot as plt  # pyright: ignore[reportMissingModuleSource]
 plt.boxplot(df["Marks"])
 plt.title("Marks Distribution")
 plt.show()
